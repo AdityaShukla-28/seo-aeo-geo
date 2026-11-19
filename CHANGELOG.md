@@ -6,6 +6,16 @@ Format: [Keep a Changelog](https://keepachangelog.com/). Versioning: [Semantic V
 - **MINOR**: new modules, site types or checks.
 - **PATCH**: fixes, wording, refreshed facts.
 
+## [1.1.0] — 2026-11-20
+
+### Added
+- `seo-aeo-geo-plugin.zip`, for Claude's "Upload a plugin" page. It contains `.claude-plugin/plugin.json` plus `skills/seo-aeo-geo/`. This fixes the "Zip must contain a .claude-plugin/plugin.json file" validation error.
+- `seo-aeo-geo-chatgpt-gpt.zip`: the ChatGPT pack as a single download.
+
+### Changed
+- README quick start now lists which release file goes to which upload page, and warns against GitHub's "Download ZIP".
+- INSTALL.md covers both the Skills and Plugins upload pages.
+
 ## [1.0.0] — 2026-11-20
 
 ### Added

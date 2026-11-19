@@ -64,18 +64,29 @@ Step-by-step details: [docs/how-it-works.md](docs/how-it-works.md).
 
 ## Quick start
 
-Download the latest release (or clone this repo), then:
+**Download the ready-made files from the [latest release](../../releases/latest).**
 
-| Tool | Do this |
+> ⚠️ **Don't upload GitHub's green "Code → Download ZIP" file to Claude.** It isn't in the format Claude's upload pages accept and will fail validation. Use the release files below.
+
+| Release file | Use it for |
 |---|---|
-| **Claude Code** | Copy the folder to `~/.claude/skills/seo-aeo-geo/` |
-| **Claude (claude.ai / desktop)** | Upload `seo-aeo-geo.zip` under Settings → Skills |
-| **ChatGPT** | Create a custom GPT: paste `chatgpt-gpt/INSTRUCTIONS.txt` and upload the `knowledge/` files |
-| **Codex** | Copy to `~/.agents/skills/seo-aeo-geo/` |
-| **Antigravity** | Copy to `~/.gemini/config/skills/seo-aeo-geo/` |
-| **Any other AI** | Upload `seo-aeo-geo-ALL.md` and follow the short instruction in INSTALL.md |
+| `seo-aeo-geo.zip` | Claude app → **Skills** upload page |
+| `seo-aeo-geo-plugin.zip` | Claude app → **Plugins** page ("Upload a plugin") |
+| `seo-aeo-geo-chatgpt-gpt.zip` | ChatGPT custom GPT: unzip, paste `INSTRUCTIONS.txt`, upload the `knowledge/` files |
+| `seo-aeo-geo-ALL.md` | Any other AI (Gemini, Perplexity, Copilot…): upload this one file |
 
-Full instructions for every tool: [INSTALL.md](INSTALL.md). The zip, the ChatGPT pack and the single file are attached to each [release](../../releases), or you can build them yourself with `python tools/build_dist.py`.
+**If you see "Zip must contain a .claude-plugin/plugin.json file"**, you're on the Plugins page with the skill zip; use `seo-aeo-geo-plugin.zip` instead. On the Skills page, use `seo-aeo-geo.zip`.
+
+Coding agents use the folder itself (clone this repo, or unzip `seo-aeo-geo.zip`):
+
+| Tool | Copy the `seo-aeo-geo` folder to |
+|---|---|
+| **Claude Code** | `~/.claude/skills/seo-aeo-geo/` |
+| **Codex** | `~/.agents/skills/seo-aeo-geo/` |
+| **Antigravity** | `~/.gemini/config/skills/seo-aeo-geo/` |
+| **Cursor and others** | `<your-repo>/.agents/skills/seo-aeo-geo/` (see INSTALL.md) |
+
+When cloning, keep the folder name `seo-aeo-geo`. Full instructions for every tool: [INSTALL.md](INSTALL.md). To build the files yourself: `python tools/build_dist.py`.
 
 Then just ask:
 

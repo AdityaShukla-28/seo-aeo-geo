@@ -26,7 +26,7 @@ Use `--out <folder>` to write somewhere else.
 | Tool | For all projects (global) | For one project only |
 |---|---|---|
 | **Claude Code** | `~/.claude/skills/seo-aeo-geo/` | `<project>/.claude/skills/seo-aeo-geo/` |
-| **Claude apps** (claude.ai, desktop) | Settings → Capabilities/Skills → upload `dist/seo-aeo-geo.zip` | — |
+| **Claude apps** (claude.ai, desktop) | **Skills** page: upload `dist/seo-aeo-geo.zip` · **Plugins** page ("Upload a plugin"): upload `dist/seo-aeo-geo-plugin.zip` | — |
 | **OpenAI Codex** | `~/.agents/skills/seo-aeo-geo/` | `<repo>/.agents/skills/seo-aeo-geo/` |
 | **Google Antigravity** | `~/.gemini/config/skills/seo-aeo-geo/` | `<workspace>/.agents/skills/seo-aeo-geo/` |
 | **Gemini CLI** | `~/.gemini/skills/seo-aeo-geo/` *(check your version's docs)* | `<repo>/.agents/skills/seo-aeo-geo/` |

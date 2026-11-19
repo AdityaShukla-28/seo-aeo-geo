@@ -81,6 +81,25 @@ def main() -> int:
         for p in files:
             z.write(p, f"{NAME}/{p.relative_to(SKILL).as_posix()}")
 
+    # 1b. Claude plugin zip (for "Upload a plugin"): .claude-plugin/plugin.json + skills/<name>/...
+    import json
+    import re
+    found = re.search(r"^## \[(\d+\.\d+\.\d+)\]", read(SKILL / "CHANGELOG.md"), re.M)
+    version = found.group(1) if found else "0.0.0"
+    manifest = {
+        "name": NAME,
+        "version": version,
+        "description": "SEO, AEO and GEO for any website: detects the site type, then audits, plans, writes and tracks visibility in Google, answer boxes and AI assistants.",
+        "author": {"name": "Aditya Shukla", "url": "https://github.com/AdityaShukla-28"},
+        "repository": "https://github.com/AdityaShukla-28/seo-aeo-geo",
+        "license": "MIT",
+        "keywords": ["seo", "aeo", "geo", "ai-search", "schema", "local-seo", "ecommerce-seo"],
+    }
+    with zipfile.ZipFile(out / f"{NAME}-plugin.zip", "w", zipfile.ZIP_DEFLATED) as z:
+        z.writestr(".claude-plugin/plugin.json", json.dumps(manifest, indent=2) + "\n")
+        for p in files:
+            z.write(p, f"skills/{NAME}/{p.relative_to(SKILL).as_posix()}")
+
     # 2. ChatGPT custom GPT bundle.
     gpt = out / "chatgpt-gpt"
     kn = gpt / "knowledge"
@@ -96,6 +115,10 @@ def main() -> int:
     count = len(list(kn.iterdir()))
     if count > 20:
         sys.exit(f"ChatGPT knowledge has {count} files (limit 20)")
+    with zipfile.ZipFile(out / f"{NAME}-chatgpt-gpt.zip", "w", zipfile.ZIP_DEFLATED) as z:
+        for p in sorted(gpt.rglob("*")):
+            if p.is_file():
+                z.write(p, f"chatgpt-gpt/{p.relative_to(gpt).as_posix()}")
 
     # 3. Single-file bundle.
     everything = [SKILL / "SKILL.md"] + sorted(refs.iterdir()) + templates
