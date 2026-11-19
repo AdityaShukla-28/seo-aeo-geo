@@ -1,0 +1,3 @@
+keyword,volume,kd,metric_source,intent,priority,cluster,is_pillar,serp_features,discovery_source,notes
+invoicing software,,,not-measured,commercial,target,freelance-invoicing,true,ai-overview|paa|video,autocomplete,"SERP estimate: big brands plus review sites, approximate"
+freelance invoice template,880,22,semrush,informational,target,freelance-invoicing,false,featured-snippet|images|paa,paid-tool,Template download pages win the SERP

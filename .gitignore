@@ -1,0 +1,27 @@
+# Per-site working data: client/brand data must never be committed
+seo-workspace/
+
+# Built bundles: attach these to GitHub Releases instead
+dist/
+*.zip
+
+# Secrets and local config
+.env
+.env.*
+*.pem
+*.key
+.shopify-env
+google-api.json
+*credentials*.json
+
+# Script output
+aeo-audit*.json
+out.json
+
+# Python / Node / OS clutter
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+Thumbs.db
+desktop.ini

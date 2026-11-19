@@ -1,0 +1,73 @@
+# robots.txt (seo-aeo-geo template; policy: references/00-core-rules.md section 7)
+# Replace example.com. Keep this file at the site root: https://example.com/robots.txt
+#
+# IMPORTANT: a bot obeys only the most specific group that names it and does NOT
+# inherit the "User-agent: *" rules. Any Disallow line you add to "*" (for example
+# /admin/ or /cart/) must be repeated in every named group below.
+# robots.txt is a request, not access control: protect private areas with a login.
+
+# --- All other crawlers --------------------------------------------------------
+User-agent: *
+Allow: /
+# Disallow: /admin/
+# Disallow: /cart/
+
+# --- Search engines (blocking these removes you from search and AI Overviews) ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# --- AI search indexes and user-triggered fetchers (allow by default) -----------
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# --- AI training bots: OWNER DECISION ------------------------------------------
+# These bots collect content for model training. Blocking them does NOT remove
+# you from Google Search, AI Overviews, ChatGPT search, Claude search or
+# Perplexity answers. Google-Extended also controls use in Gemini grounding.
+# OWNER DECISION: ask the site owner, record the answer in site-profile.md, then
+# EITHER leave this block commented (training allowed by the "*" group)
+# OR remove the leading "# " from the lines below to block training.
+#
+# User-agent: GPTBot
+# Disallow: /
+#
+# User-agent: ClaudeBot
+# Disallow: /
+#
+# User-agent: Google-Extended
+# Disallow: /
+#
+# User-agent: Applebot-Extended
+# Disallow: /
+#
+# User-agent: CCBot
+# Disallow: /
+#
+# User-agent: Bytespider
+# Disallow: /
+#
+# User-agent: Meta-ExternalAgent
+# Disallow: /
+
+Sitemap: https://example.com/sitemap.xml

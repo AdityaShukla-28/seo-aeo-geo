@@ -1,0 +1,11 @@
+---
+description: SEO, AEO and GEO work — audits, meta tags, schema, sitemaps, robots.txt, AI crawlers, llms.txt, Core Web Vitals, keyword and AI-prompt research, content, backlinks, local, e-commerce, hreflang, Search Console, AI visibility
+alwaysApply: false
+---
+
+For search-visibility tasks, read `.agents/skills/seo-aeo-geo/SKILL.md` (or wherever the seo-aeo-geo skill folder lives in this project) and follow its steps in order:
+
+- `references/00-core-rules.md` is the only source of thresholds and rules.
+- Open other reference files only when the current step needs them.
+- Ask before changing anything that ships to production; follow the safe-change protocol in `references/03-platforms.md`.
+- Keep per-site working files in `seo-workspace/<domain>/`; never commit secrets.

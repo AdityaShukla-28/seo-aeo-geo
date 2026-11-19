@@ -1,0 +1,26 @@
+# Example Company
+
+> Example Company makes invoicing software for freelancers and small agencies in India and the UK.
+
+Key facts: founded 2019 · head office Pune, India · plans from INR 0 (free tier) · support in English and Hindi.
+
+## Product
+- [Features](https://example.com/features/): what the product does, by use case
+- [Pricing](https://example.com/pricing/): plans, limits and currencies
+- [Integrations](https://example.com/integrations/): supported banks, payment gateways and accounting tools
+
+## Docs
+- [Getting started](https://example.com/docs/getting-started/): set up an account and send a first invoice
+- [API reference](https://example.com/docs/api/): REST endpoints and authentication
+
+## Company
+- [About](https://example.com/about/): team, history and contact details
+- [Customers](https://example.com/customers/): case studies with results
+
+## Policies
+- [Privacy policy](https://example.com/privacy/)
+- [Terms of service](https://example.com/terms/)
+
+## Optional
+- [Blog](https://example.com/blog/): guides on invoicing, taxes and getting paid
+- [Changelog](https://example.com/changelog/): dated product updates

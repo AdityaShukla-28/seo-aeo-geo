@@ -1,0 +1,3 @@
+date,engine,mode,location,prompt,cluster,run,brand_mentioned,brand_position,brand_cited,cited_urls,sentiment,competitors_mentioned,accuracy_issue,notes
+2026-11-18,chatgpt,search on; logged out,IN-Pune,best accounting software for small clinics,clinic-software,1,yes,2,no,https://www.g2.com/categories/medical-billing|https://example-review-site.com/best-clinic-software,positive,CompetitorA|CompetitorB,,listed second after CompetitorA
+2026-11-18,perplexity,default; logged out,IN-Pune,best accounting software for small clinics,clinic-software,1,no,,no,https://competitora.com/pricing,,CompetitorA|CompetitorC,,brand absent; cites competitor pricing page
